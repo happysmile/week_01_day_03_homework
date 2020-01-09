@@ -37,11 +37,13 @@ p stops
 #7. Print the number of stops there are in the array?
 
 p "number of elements: #{stops.length()}"
+p "number of elements: #{stops.count()}"
 
 #8. Show as many ways as you can to return "Falkirk High" from the array?
 
 p stops[2]
 p stops.at(2)
+p stops.fetch(2)
 
 #9. Reverse the positions of the stops in the array
 

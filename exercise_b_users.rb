@@ -76,6 +76,7 @@ p users["Erik"][:lottery_numbers].min()
 # 6. Return an array of Avril's lottery numbers that are even
 
 avril_lottery_numbers = users["Avril"][:lottery_numbers]
+
 p avril_lottery_numbers
 
 avril_even_lottery_numbers = []
@@ -86,6 +87,16 @@ for number in avril_lottery_numbers
 end
 
 p avril_even_lottery_numbers
+
+# Stack Overflow alternative method
+
+# avril_lottery_numbers = users["Avril"][:lottery_numbers].each do |num|
+#   if(num%2==0)
+#     p num
+#   end
+# end
+
+# also num in users["Avril"][:lottery_numbers].{|num num.even?}
 
 # 7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
 
@@ -102,6 +113,9 @@ p users["Erik"][:home_town]
 p users["Erik"][:pets]
 users["Erik"][:pets].push({:name => "fluffy", :species => "dog"})
 p users["Erik"][:pets]
+
+# alternative method
+# p users["Erik"][:pets].insert(4, :name=> "fluffy", :species => "dog")
 
 # 10. Add another person to the users hash
 
